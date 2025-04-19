@@ -53,6 +53,27 @@ First, install miniconda: https://docs.conda.io/en/latest/miniconda.html
 Then run the following commands, using anaconda prompt as the terminal (or any other terminal configured to work with conda)
 
 This will:
+
+Edit setup.py
+
+replace 'tokenizers==0.14.0 -> 'tokenizers>=0.13.3,<0.14.0',
+```bash
+install_requires=[
+        'tqdm',
+        'rotary_embedding_torch',
+        'inflect',
+        'progressbar',
+        'einops',
+        'unidecode',
+        'scipy',
+        'librosa',
+        'transformers==4.31.0',
+        'tokenizers>=0.13.3,<0.14.0',
+        'scipy==1.13.1'
+        # 'deepspeed==0.8.3',
+    ],
+    
+```
 1. create conda environment with minimal dependencies specified
 1. activate the environment
 1. install pytorch with the command provided here: https://pytorch.org/get-started/locally/
